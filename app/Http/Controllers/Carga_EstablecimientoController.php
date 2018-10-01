@@ -240,6 +240,9 @@ class Carga_EstablecimientoController extends Controller
 		       	    			$repetidos = $repetidos . $ct . ", ";
 		       	    		}
 				        }
+				        else{
+				        	$fila_archivo = $fila_archivo . $ct . ", ";
+				        }
 				        $ct++;
 	       	    	}
 	            }

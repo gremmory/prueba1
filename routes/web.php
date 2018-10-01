@@ -20,8 +20,8 @@ Route::get('/', function () {
     return view('layouts/admin');
 })->middleware('auth');;
 
-//'prefix' => 'admin', 
-Route::group(['middleware'=>'App\Http\Middleware\SuperAdminMiddleware'], function(){
+//'prefix' => 'admin', App\Http\Middleware\SuperAdminMiddleware
+Route::group(['middleware'=>['auth', 'role']], function(){
 
 	Route::resource('nomodel/annos', 'AnnosController');
 	Route::resource('nomodel/cargos', 'CargosController');
@@ -124,7 +124,7 @@ Route::group(['middleware'=>'App\Http\Middleware\SuperAdminMiddleware'], functio
 	Route::get('/pdf/generarpdf/all/{id}/{dpt}', 'GenerarPDFController@getAll');
 });
 
-Route::group(['middleware'=>'App\Http\Middleware\SuperAdminMiddleware'], function(){
+Route::group(['middleware'=>'auth'], function(){
 	Route::resource('model/establecimientos', 'EstablecimientosController');
 	Route::post('model/establecimientos/store', ['as' =>'EstablecimientosFormRequest', 'uses' => 'EstablecimientosController@Insetar']);
 	Route::get('model/municipios2/{id}', 'EstablecimientosController@getMunicipio');
