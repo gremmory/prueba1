@@ -23,7 +23,7 @@
             <div class="form-group">
                 <label for="cod_establecimiento">Cod Establecimiento</label>
                 <!-- <input type="text" name="cod_establecimiento" class="form-control" value="{{old('cod_establecimiento')}}" placeholder="Cod Establecimiento ..."> -->
-                <select class="form-control" name="cod_establecimiento">
+                <select class="form-control" name="cod_establecimiento" required>
                 @if ($establecimientos != null)
                 @foreach($establecimientos as $item)
                     <option value="{{$item->cod_establecimiento}}">{{$item->cod_establecimiento}} --- {{$item->ESTABLECIMIENTO}}</option>
@@ -33,7 +33,7 @@
             </div>
             <div class="form-group">
                 <label for="cod_equipo">Cod. Equipo</label>
-                <input type="text" name="cod_equipo" class="form-control" value="{{old('cod_equipo')}}" placeholder="Cod. del Equipo ... ">
+                <input type="text" name="cod_equipo" class="form-control" value="{{old('cod_equipo')}}" placeholder="Cod. del Equipo ... " required>
             </div>
             <div class="form-group">
                 <label for="tipo_equipo">Tipo Equipo</label>
@@ -63,7 +63,7 @@
             </div>
             <div class="form-group">
                 <label for="series">Serie</label>
-                <input type="text" name="series" class="form-control" value="{{old('series')}}" placeholder="Series ... ">
+                <input type="text" name="series" class="form-control" value="{{old('series')}}" placeholder="Series ... " required>
             </div>
             <div class="form-group">
                 <label for="cantidad">cantidad</label>
@@ -75,7 +75,7 @@
             </div>    
             <div class="form-group">
                 <label for="Fases_Id_Fase">Fase</label>
-                <select class="form-control" name="Fases_Id_Fase">
+                <select class="form-control" name="Fases_Id_Fase" required>
                     <option value=""></option>
                 @if ($fases != null)
                 @foreach($fases as $item)
@@ -86,7 +86,7 @@
             </div>
             <div class="form-group">
                 <label for="tipo">cantidad</label>
-                <input type="text" name="cantidad" class="form-control" value="{{old('tipo')}}" placeholder="Cantidad ... ">
+                <input type="text" name="cantidad" class="form-control" value="{{old('tipo')}}" placeholder="Cantidad ... " required>
             </div>       
             <div class="form-group">
                 <button class="btn btn-primary" type="submit">Guardar</button>

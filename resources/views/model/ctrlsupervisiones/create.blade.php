@@ -21,7 +21,7 @@
             <div class="form-group">
                 <label for="cod_establecimiento">Cod Establecimiento</label>
                 <!-- <input type="text" name="cod_establecimiento" class="form-control" value="{{old('cod_establecimiento')}}" placeholder="Cod Establecimiento ..."> -->
-                <select class="form-control" name="cod_establecimiento">
+                <select class="form-control" name="cod_establecimiento" >
                 @if ($establecimientos != null)
                 @foreach($establecimientos as $item)
                     <option value="{{$item->cod_establecimiento}}">{{$item->ESTABLECIMIENTO}}</option>

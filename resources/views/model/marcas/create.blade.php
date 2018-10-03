@@ -20,7 +20,7 @@
             {{ Form::token() }}
             <div class="form-group">
                 <label for="Desc_Marca"></label>
-                <input type="text" name="Desc_Marca" class="form-control" value="{{old('Desc_Marca')}}" placeholder="Marca ...">
+                <input type="text" name="Desc_Marca" class="form-control" value="{{old('Desc_Marca')}}" placeholder="Marca ..." required>
             </div>
             <div class="form-group">
                 <button class="btn btn-primary" type="submit">Guardar</button>

@@ -20,11 +20,11 @@
             {{ Form::token() }}
             <div class="form-group">
                 <label for="tipo_equipo"></label>
-                <input type="text" name="tipo_equipo" class="form-control" value="{{old('tipo_equipo')}}" placeeholder="Tipo Equipo - Ejemplo: 00, 01, 02 ... 12, 13, ... XX  ...">
+                <input type="text" name="tipo_equipo" class="form-control" value="{{old('tipo_equipo')}}" placeeholder="Tipo Equipo - Ejemplo: 00, 01, 02 ... 12, 13, ... XX  ..." required>
             </div>
             <div class="form-group">
                 <label for="Desc_tipoequipo"></label>
-                <input type="text" name="Desc_tipoequipo" class="form-control" value="{{old('Desc_tipoequipo')}}" placeeholder="Descripcion Tipo Equipo ...">
+                <input type="text" name="Desc_tipoequipo" class="form-control" value="{{old('Desc_tipoequipo')}}" placeeholder="Descripcion Tipo Equipo ..." required>
             </div>
             <div class="form-group">
                 <button class="btn btn-primary" type="submit">Guardar</button>

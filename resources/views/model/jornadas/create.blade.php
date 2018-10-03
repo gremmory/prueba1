@@ -20,7 +20,7 @@
             {{ Form::token() }}
             <div class="form-group">
                 <label for="Desc_jornada">Jornada</label>
-                <input type="text" name="Desc_jornada" class="form-control" value="{{old('Desc_jornada')}}" placeholder="Jornada ...">
+                <input type="text" name="Desc_jornada" class="form-control" value="{{old('Desc_jornada')}}" placeholder="Jornada ..." required>
             </div>
             <div class="form-group">
                 <button class="btn btn-primary" type="submit">Guardar</button>

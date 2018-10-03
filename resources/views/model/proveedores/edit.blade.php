@@ -20,7 +20,7 @@
             {{ Form::token() }}
             <div class="form-group">
                 <label for="Nombre_Pro">Nombre Proveedor</label>
-                <input type="text" name="Nombre_Pro" class="form-control" value="{{$proveedores->Nombre_Pro}}" placeholder="Nombre Proveedor ...">
+                <input type="text" name="Nombre_Pro" class="form-control" value="{{$proveedores->Nombre_Pro}}" placeholder="Nombre Proveedor ..." required>
             </div>
             <div class="form-group">
                 <label for="Direccion_Prov">Direccion Proveedor</label>

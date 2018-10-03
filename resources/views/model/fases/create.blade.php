@@ -22,15 +22,15 @@
             {{ Form::token() }}
             <div class="form-group">
                 <label for="Nombre">Nombre Fase</label>
-                <input type="text" name="Nombre" class="form-control" value="{{old('Nombre')}}" placeholder="Nombre ... ">
+                <input type="text" name="Nombre" class="form-control" value="{{old('Nombre')}}" placeholder="Nombre ... " required>
             </div>
             <div class="form-group">
                 <label for="Descripcion">Descripcion</label>
-                <input type="text" name="Descripcion" class="form-control" value="{{old('Descripcion')}}" placeholder="Descripcion ... ">
+                <input type="text" name="Descripcion" class="form-control" value="{{old('Descripcion')}}" placeholder="Descripcion ... " required>
             </div>
             <div class="form-group">
                 <label for="Fecha_Inicio">Fecha de Inicio</label>
-                <input type="date" name="Fecha_Inicio" class="form-control" value="{{old('Fecha_Inicio')}}" placeholder="Fecha ... ">
+                <input type="date" name="Fecha_Inicio" class="form-control" value="{{old('Fecha_Inicio')}}" placeholder="Fecha ... " >
             </div> 
             <div class="form-group">
                 <label for="Cooperador">Cooperador</label>

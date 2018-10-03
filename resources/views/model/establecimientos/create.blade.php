@@ -22,11 +22,11 @@
             {{ Form::token() }}
             <div class="form-group">
                 <label for="cod_establecimiento">Cod. Establecimiento</label>
-                <input type="text" name="cod_establecimiento" class="form-control" value="{{old('cod_establecimiento')}}" placeholder="Cod. del Establecimiento ... ">
+                <input type="text" name="cod_establecimiento" class="form-control" value="{{old('cod_establecimiento')}}" placeholder="Cod. del Establecimiento ... " required>
             </div>
             <div class="form-group">
                 <label for="cod_depto">Departamento</label>
-                <select class="form-control" name="cod_depto" id="cod_depto">
+                <select class="form-control" name="cod_depto" id="cod_depto" required>
                     <option value="{{old('cod_Depto')}}">{{old('Desc_Deptos')}}</option>
                 @if ($departamentos != null)
                 @foreach($departamentos as $item)
@@ -37,7 +37,7 @@
             </div>
             <div class="form-group">
                 <label for="cod_mupio">Municipio</label>
-                <select class="form-control" name="cod_mupio" id="cod_mupio" value="{{old('cod_mupio')}}" placeholder="Elegir">
+                <select class="form-control" name="cod_mupio" id="cod_mupio" value="{{old('cod_mupio')}}" placeholder="Elegir" required>
                     <option value="{{old('cod_mupio')}}">Elegir</option>
                 </select>
             </div>

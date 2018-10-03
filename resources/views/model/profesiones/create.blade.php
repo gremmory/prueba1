@@ -20,11 +20,11 @@
             {{ Form::token() }}
             <div class="form-group">
                 <label for="id_prefesion"></label>
-                <input type="text" name="id_prefesion" class="form-control" placeholder="Id Profesion - Ejemplo: 00, 01, 02 ... 12, 13, ... XX  ..." value="{{old('id_prefesion')}}" >
+                <input type="text" name="id_prefesion" class="form-control" placeholder="Id Profesion - Ejemplo: 00, 01, 02 ... 12, 13, ... XX  ..." value="{{old('id_prefesion')}}" required>
             </div>
             <div class="form-group">
                 <label for="profesion"></label>
-                <input type="text" name="profesion" class="form-control" placeholder="Profesion ..." value="{{old('profesion')}}" >
+                <input type="text" name="profesion" class="form-control" placeholder="Profesion ..." value="{{old('profesion')}}" required>
             </div>
             <div class="form-group">
                 <button class="btn btn-primary" type="submit">Guardar</button>

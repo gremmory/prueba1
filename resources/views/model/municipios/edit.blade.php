@@ -24,7 +24,7 @@
                 <input type="text" name="COD_MUPIO" class="form-control" value=" " placeholder="Cod ... 01, 02, 03 ... 15,16 ... XX">
             </div>
             -->
-            <select class="form-control" name="COD_DEPTO">
+            <select class="form-control" name="COD_DEPTO" required>
                 <option value="{{$municipios->COD_DEPTO}}">{{$municipios->COD_DEPTO}}</option>
             @if ($departamentos != null)
             @foreach($departamentos as $item)
@@ -34,8 +34,8 @@
             </select>
 
             <div class="form-group">
-                <label for="NOM_MUPIO">NOmbre</label>
-                <input type="text" name="NOM_MUPIO" class="form-control" value="{{$municipios->NOM_MUPIO}}" placeholder="Nombres ...">
+                <label for="NOM_MUPIO">Nombre</label>
+                <input type="text" name="NOM_MUPIO" class="form-control" value="{{$municipios->NOM_MUPIO}}" placeholder="Nombres ..." required>
             </div>
             <div class="form-group">
                 <button class="btn btn-primary" type="submit">Guardar</button>

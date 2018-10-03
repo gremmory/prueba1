@@ -20,7 +20,7 @@
             {{ Form::token() }}
             <div class="form-group">
                 <label for="profesion"></label>
-                <input type="text" name="profesion" class="form-control" value="{{$profesiones->profesion}}" placeholder="Profesion ...">
+                <input type="text" name="profesion" class="form-control" value="{{$profesiones->profesion}}" placeholder="Profesion ..." required>
             </div>
             <div class="form-group">
                 <button class="btn btn-primary" type="submit">Guardar {{sprintf("%'.02d\n", $profesiones->id_prefesion)}}</button>

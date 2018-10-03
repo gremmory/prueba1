@@ -22,7 +22,7 @@
             {{ Form::token() }}
             <div class="form-group">
                 <label for="cod_instructor">Cod. Instructor</label>
-                <input type="text" name="cod_instructor" class="form-control" value="{{old('cod_instructor')}}" placeholder="Cod. Instructor ... ">
+                <input type="text" name="cod_instructor" class="form-control" value="{{old('cod_instructor')}}" placeholder="Cod. Instructor ... " required>
             </div>
             <div class="form-group">
                 <label for="primer_apellido">Primer Apellido</label>

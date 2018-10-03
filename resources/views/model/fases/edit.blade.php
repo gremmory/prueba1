@@ -19,7 +19,7 @@
             {!! Form::model ($fases, ['method'=>'PATCH', 'route' => array('fases.update', $fases->Id_Fase)]) !!}
             {{ Form::token() }}
             <div class="form-group">
-                <label for="Nombre">Nombre Fase</label>
+                <label for="Nombre" required>Nombre Fase</label>
                 <input type="text" name="Nombre" class="form-control" value="{{$fases->Nombre}}" placeholder="Nombre ... ">
             </div>
             <div class="form-group">

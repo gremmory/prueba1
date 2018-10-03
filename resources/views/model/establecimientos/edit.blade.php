@@ -26,7 +26,7 @@
             -->
             <div class="form-group">
                 <label for="cod_depto">Departamento</label>
-                <select class="form-control" name="cod_depto" id="cod_depto">
+                <select class="form-control" name="cod_depto" id="cod_depto" >
                     <option value="{{ $establecimientos->cod_depto }}" >{{ $establecimientos->departamentos($establecimientos->cod_depto)  }}  </option>
                     @if ($departamentos != null)
                     @foreach($departamentos as $item)

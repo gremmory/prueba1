@@ -48,12 +48,12 @@
         -->
             <div class="form-group">
                 <label for="desc_equipo">Descripcion Equipo</label>
-                <input type="text" name="desc_equipo" class="form-control" value="{{$detalle_equipos->desc_equipo}}" placeholder="Descripcion equipo ... ">
+                <input type="text" name="desc_equipo" class="form-control" value="{{$detalle_equipos->desc_equipo}}" placeholder="Descripcion equipo ... " required>
             </div>
             <div class="form-group">
                 <label for="id_marca">Marca</label>
                 <select class="form-control" name="id_marca">
-                    <option value="{{$detalle_equipos->tipo_equipo}}"> {{$detalle_equipos->marcas($detalle_equipos->id_marca)}} </option>
+                    <option value="{{$detalle_equipos->tipo_equipo}}" required> {{$detalle_equipos->marcas($detalle_equipos->id_marca)}} </option>
                 @if ($marcas != null)
                 @foreach($marcas as $item)
                     <option value="{{$item->Id_Marca}}">{{$item->Desc_Marca}}</option>
@@ -63,7 +63,7 @@
             </div>
             <div class="form-group">
                 <label for="series">Serie</label>
-                <input type="text" name="series" class="form-control" value="{{$detalle_equipos->series}}" placeholder="Series ... ">
+                <input type="text" name="series" class="form-control" value="{{$detalle_equipos->series}}" placeholder="Series ... " required>
             </div>
             <div class="form-group">
                 <label for="cantidad">Cantidad</label>
@@ -75,7 +75,7 @@
             </div>    
             <div class="form-group">
                 <label for="Fases_Id_Fase">Fase</label>
-                <select class="form-control" name="Fases_Id_Fase">
+                <select class="form-control" name="Fases_Id_Fase" required>
                     <option value="{{$detalle_equipos->Fases_Id_Fase}}"> {{$detalle_equipos->fases($detalle_equipos->Fases_Id_Fase)}} </option>
                 @if ($fases != null)
                 @foreach($fases as $item)
@@ -86,7 +86,7 @@
             </div>
             <div class="form-group">
                 <label for="tipo">cantidad</label>
-                <input type="text" name="cantidad" class="form-control" value="{{$detalle_equipos->tipo}}" placeholder="Cantidad ... ">
+                <input type="text" name="cantidad" class="form-control" value="{{$detalle_equipos->tipo}}" placeholder="Cantidad ... " >
             </div>     
             <div class="form-group">
                 <button class="btn btn-primary" type="submit">Guardar</button>

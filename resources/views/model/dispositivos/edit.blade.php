@@ -20,7 +20,7 @@
             {{ Form::token() }}
             <div class="form-group">
                 <label for="Desc_tipoequipo"></label>
-                <input type="text" name="Desc_tipoequipo" class="form-control" value="{{$dispositivos->Desc_tipoequipo}}" placeholder="Descripcion Tipo Equipo ...">
+                <input type="text" name="Desc_tipoequipo" class="form-control" value="{{$dispositivos->Desc_tipoequipo}}" placeholder="Descripcion Tipo Equipo ..." required>
             </div>
             <div class="form-group">
                 <button class="btn btn-primary" type="submit">Guardar</button>
