@@ -138,7 +138,7 @@
                 <li><a href="{{URL::action('FasesController@index')}}"><i class="fa fa-laptop"></i> Fases </a></li>
                 <li><a href="{{URL::action('Detalle_EquiposController@index')}}"><i class="fa fa-laptop"></i> Detalle Equipos </a></li>
               </ul>
-            </  li>
+            </li>
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-flag-o"></i>

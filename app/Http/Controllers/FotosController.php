@@ -58,6 +58,7 @@ class FotosController extends Controller
         if($this->VerificarModi()){
             return new Response(view('unauthorized')->with('role', 'Administrador o permisos para editar'));
         }
+        
 		if(\File::exists(public_path('uploads/' . $id1))){
 			\File::delete(public_path('uploads/' . $id1));
 			$query=fotos::findOrFail($id2);
