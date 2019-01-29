@@ -19,6 +19,7 @@ class Cargos extends Model
 
     protected $guarded =[
     	//cuando no queremo almacenar en nuestro modelo
+    	//Esto comenatio
     ];
 
 }
