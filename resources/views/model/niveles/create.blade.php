@@ -23,7 +23,7 @@
                 <input type="text" name="cod_nivel" class="form-control" placeholder="Codigo..." value="{{old('cod_nivel')}}" required>
             </div>
             <div class="form-group">
-                <label for="desc_nivel">Departamento</label>
+                <label for="desc_nivel">Nombre del Nivel</label>
                 <input type="text" name="desc_nivel" class="form-control" placeholder="Nivel ..." value="{{old('desc_nivel')}}" required>
             </div>
             <div class="form-group">

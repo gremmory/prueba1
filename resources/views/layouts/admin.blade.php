@@ -37,7 +37,7 @@
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b>-</b>--</span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>Sistema</b></span>
+          <span class="logo-lg"><b>Huellas</b></span>
         </a>
 
         <!-- Header Navbar: style can be found in header.less -->
@@ -142,7 +142,7 @@
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-flag-o"></i>
-                <span>Dept-Municiopio</span>
+                <span>Dept-Municipio</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
