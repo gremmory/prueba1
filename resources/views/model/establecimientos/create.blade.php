@@ -121,9 +121,9 @@
             <div class="form-group">
                 <label for="MULTIGRADO">Multigrado</label>
                 <select class="form-control" name="MULTIGRADO" id="MULTIGRADO">
-                    <option value="{{old('MULTIGRADO')}}"> Elegir Opcion</option>
-                    <option value="0">No</option>
-                    <option value="1">Si</option>
+                    <option value="Gradada" {{old('MULTIGRADO') == "Gradada" ? 'selected' : '' }}>Gradada</option>
+                    <option value="Multigrado" {{old('MULTIGRADO') == "Multigrado" ? 'selected' : '' }}>Multigrado</option>
+                    <option value="Unitaria" {{old('MULTIGRADO') == "Unitaria" ? 'selected' : '' }}>Unitaria</option>
                 </select>
             </div>
             <div class="form-group">
@@ -134,7 +134,7 @@
             <div class="form-group">
                 <label for="opf">OPF</label>
                 <!--<input type="text" name="opf" class="form-control" value="{{old('opf')}}" placeholder="OPF ... ">-->
-                <select class="form-control" name="MULTIGRADO" id="opf">
+                <select class="form-control" name="opf" id="opf">
                     <option value="{{old('opf')}}"> Elegir Opcion</option>
                     <option value="0">No</option>
                     <option value="1">Si</option>
@@ -151,11 +151,11 @@
             </div>
             <div class="form-group">
                 <label for="latitud">Cordenada Latitud</label>
-                <input class="form-control" type="text" placeholder="0.00" required name="latitud" value="{{old('latitud')}}" placeholder="latitud ...">
+                <input class="form-control" type="text" placeholder="0.00" name="latitud" value="{{old('latitud')}}" placeholder="latitud ...">
             </div>
             <div class="form-group">
                 <label for="longitud">Cordenada longitud</label>
-                <input class="form-control" type="text" placeholder="0.00" required name="longitud" value="{{old('longitud')}}" placeholder="longitud ...">
+                <input class="form-control" type="text" placeholder="0.00" name="longitud" value="{{old('longitud')}}" placeholder="longitud ...">
             </div>
 
             <div class="form-group">

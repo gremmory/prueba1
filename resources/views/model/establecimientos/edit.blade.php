@@ -122,9 +122,10 @@
             <div class="form-group">
                 <label for="MULTIGRADO">Multigrado</label>
                 <select class="form-control" name="MULTIGRADO" id="MULTIGRADO">
-                    <option value="{{ $establecimientos->MULTIGRADO  }}">{{ $establecimientos->MULTIGRADO == 0 ? 'No' : 'Si'}}</option>
-                    <option value="0">No</option>
-                    <option value="1">Si</option>
+                    <option value="{{old('MULTIGRADO')}}"> {{ $establecimientos->MULTIGRADO }}</option>
+                    <option value="Gradada" {{old('MULTIGRADO') == "Gradada" ? 'selected' : '' }}>Gradada</option>
+                    <option value="Multigrado" {{old('MULTIGRADO') == "Multigrado" ? 'selected' : '' }}>Multigrado</option>
+                    <option value="Unitaria" {{old('MULTIGRADO') == "Unitaria" ? 'selected' : '' }}>Unitaria</option>
                 </select>
             </div>
             <div class="form-group">
@@ -135,7 +136,7 @@
             <div class="form-group">
                 <label for="opf">OPF</label>
                 <!-- <input type="text" name="opf" class="form-control" value="{{ $establecimientos->opf }}" placeholder="OPF ... "> -->
-                <select class="form-control" name="MULTIGRADO" id="opf">
+                <select class="form-control" name="opf" id="opf">
                     <option value="{{old('opf')}}"> {{ $establecimientos->opf == 0 ? 'No' : 'Si'}}</option>
                     <option value="0">No</option>
                     <option value="1">Si</option>
@@ -152,11 +153,11 @@
             </div>
             <div class="form-group">
                 <label for="latitud">Cordenada Latitud</label>
-                <input  class="form-control" type="text"  required name="latitud" value="{{$establecimientos->latitud}}"  placeholder="Latitud ...">
+                <input  class="form-control" type="text"  name="latitud" value="{{$establecimientos->latitud}}"  placeholder="Latitud ...">
             </div>
             <div class="form-group">
                 <label for="longitud">Cordenada longitud</label>
-                <input  class="form-control" type="text" required name="longitud" value="{{$establecimientos->longitud}}" placeholder="longitud ...">
+                <input  class="form-control" type="text" name="longitud" value="{{$establecimientos->longitud}}" placeholder="longitud ...">
             </div>
 
             <div class="form-group">
