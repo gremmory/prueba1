@@ -122,7 +122,7 @@
             <div class="form-group">
                 <label for="MULTIGRADO">Multigrado</label>
                 <select class="form-control" name="MULTIGRADO" id="MULTIGRADO">
-                    <option value="{{$establecimientos->MULTIGRADO)}}"> {{ $establecimientos->MULTIGRADO }}</option>
+                    <option value="{{$establecimientos->MULTIGRADO }}"> {{ $establecimientos->MULTIGRADO }}</option>
                     <option value="Gradada" {{old('MULTIGRADO') == "Gradada" ? 'selected' : '' }}>Gradada</option>
                     <option value="Multigrado" {{old('MULTIGRADO') == "Multigrado" ? 'selected' : '' }}>Multigrado</option>
                     <option value="Unitaria" {{old('MULTIGRADO') == "Unitaria" ? 'selected' : '' }}>Unitaria</option>
