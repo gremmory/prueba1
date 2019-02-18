@@ -35,7 +35,7 @@
 						<th>Alumnas</th>
 						<th>Total</th>
 						<th>Maestros</th>
-						<th>Multigrado</th>
+						<!--<th>Multigrado</th>-->
 						<th>OPF</th>
 
 						<th>Cuenta Carta</th>
@@ -68,7 +68,7 @@
 						<td>{{ $an->ALUMNAS }}</td>
 						<td>{{ $an->TOTAL }}</td>
 						<td>{{ $an->MAESTROS }}</td>
-						<td>{{ $an->MULTIGRADO }}</td>
+						<!--<td>{{ $an->MULTIGRADO }}</td>-->
 						<td>{{ $an->opf }}</td>
 						<td>{{ $an->cuenta_carta == 0 ? 'No' : 'Si' }}</td>
 						<td>{{ $an->latitud }}</td>

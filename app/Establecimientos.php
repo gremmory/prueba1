@@ -11,7 +11,9 @@ class Establecimientos extends Model
     public $incrementing  = false;
     protected $primaryKey = "cod_establecimiento";
 
+    
     public $timestamps=false;
+
 
     protected $fillable =[
         'cod_establecimiento',
@@ -29,7 +31,7 @@ class Establecimientos extends Model
         'ALUMNAS',
         'TOTAL',
         'MAESTROS',
-        'MULTIGRADO',
+        //'MULTIGRADO',
         'opf',
         //'id_fase',
         'cuenta_carta',

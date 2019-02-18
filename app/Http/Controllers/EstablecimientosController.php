@@ -115,7 +115,7 @@ class EstablecimientosController extends Controller
             'ALUMNAS' => 'numeric|nullable',
             'TOTAL' => 'numeric|nullable',
             'MAESTROS' => 'numeric|nullable',
-            'MULTIGRADO' => 'required',
+            //'MULTIGRADO' => 'required',
             'opf' => 'boolean', ///'max:35',
             //'id_fase' => 'numeric',
             'cuenta_carta' => 'boolean',
@@ -149,7 +149,7 @@ class EstablecimientosController extends Controller
         $query->ALUMNAS = $request->ALUMNAS;
         $query->TOTAL = $request->ALUMNAS + $request->ALUMNOS;
         $query->MAESTROS = $request->MAESTROS;
-        $query->MULTIGRADO = $request->MULTIGRADO;
+        //$query->MULTIGRADO = $request->MULTIGRADO;
         $query->opf = $request->opf;
 
         $query->cuenta_carta = $request->cuenta_carta;

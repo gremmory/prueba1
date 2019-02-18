@@ -265,8 +265,8 @@
     <!-- Drop Zone 
     <script src="{{asset('js/dropzone.js')}}"></script>
     -->
-
     
+    @yield('script')
     
   </body>
 </html>

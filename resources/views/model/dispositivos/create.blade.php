@@ -19,11 +19,11 @@
             {!! Form::open(array('url'=> '/model/dispositivos/store',  'method'=>'POST', 'autocomplete'=>'off')) !!}
             {{ Form::token() }}
             <div class="form-group">
-                <label for="tipo_equipo"></label>
+                <label for="tipo_equipo">Codigo Equipo</label>
                 <input type="text" name="tipo_equipo" class="form-control" value="{{old('tipo_equipo')}}" placeeholder="Tipo Equipo - Ejemplo: 00, 01, 02 ... 12, 13, ... XX  ..." required>
             </div>
             <div class="form-group">
-                <label for="Desc_tipoequipo"></label>
+                <label for="Desc_tipoequipo">Nombre o Descripción del equipo</label>
                 <input type="text" name="Desc_tipoequipo" class="form-control" value="{{old('Desc_tipoequipo')}}" placeeholder="Descripcion Tipo Equipo ..." required>
             </div>
             <div class="form-group">

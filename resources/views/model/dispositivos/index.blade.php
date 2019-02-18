@@ -17,9 +17,9 @@
 			<div class="table-responsive">
 				<table class="table table-striped table-bordered table-condensed table-hover">
 					<thead>
-						<th> ID </th>
-						<th>Tipo</th>
+						<th> Tipo Equipo </th>
 						<th>Descripcion</th>
+						<th>Opciones</th>
 					</thead>
 					@foreach ($dispositivos as $an)
 					<tr>

@@ -19,7 +19,7 @@
             {!! Form::model ($dispositivos, ['method'=>'PATCH', 'route' => array('dispositivos.update', $dispositivos->tipo_equipo)]) !!}
             {{ Form::token() }}
             <div class="form-group">
-                <label for="Desc_tipoequipo"></label>
+                <label for="Desc_tipoequipo">Nombre o Descripción del equipo</label>
                 <input type="text" name="Desc_tipoequipo" class="form-control" value="{{$dispositivos->Desc_tipoequipo}}" placeholder="Descripcion Tipo Equipo ..." required>
             </div>
             <div class="form-group">

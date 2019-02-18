@@ -39,7 +39,7 @@ class EstablecimientosFormRequest extends FormRequest
             'ALUMNAS' => 'numeric|nullable',
             'TOTAL' => 'numeric|nullable',
             'MAESTROS' => 'numeric|nullable',
-            'MULTIGRADO' => 'required',
+            //'MULTIGRADO' => 'required',
             'opf' => 'boolean',//'max:35',
             //'id_fase' => 'numeric',
             'cuenta_carta' => 'boolean',

@@ -119,6 +119,7 @@
                 <input type="text" name="MULTIGRADO" class="form-control" value="{{old('MULTIGRADO')}}" placeholder="Multigrado ... ">
             </div>
 -->
+<!--
             <div class="form-group">
                 <label for="MULTIGRADO">Multigrado</label>
                 <select class="form-control" name="MULTIGRADO" id="MULTIGRADO">
@@ -128,9 +129,17 @@
                     <option value="Unitaria" {{old('MULTIGRADO') == "Unitaria" ? 'selected' : '' }}>Unitaria</option>
                 </select>
             </div>
+        -->
             <div class="form-group">
                 <label for="modalidad">Modalidad</label>
-                <input type="text" name="modalidad" class="form-control" value="{{$establecimientos->modalidad}}" placeholder="Maestros ... ">
+            <!--    <input type="text" name="modalidad" class="form-control" value="{{$establecimientos->modalidad}}" placeholder="Maestros ... ">
+            -->
+                <select class="form-control" name="modalidad" id="modalidad">
+                    <option value="{{$establecimientos->modalidad }}"> {{ $establecimientos->modalidad }}</option>
+                    <option value="Gradada" {{old('modalidad') == "Gradada" ? 'selected' : '' }}>Gradada</option>
+                    <option value="Multigrado" {{old('modalidad') == "Multigrado" ? 'selected' : '' }}>Multigrado</option>
+                    <option value="Unitaria" {{old('modalidad') == "Unitaria" ? 'selected' : '' }}>Unitaria</option>
+                </select>
             </div>
 
             <div class="form-group">

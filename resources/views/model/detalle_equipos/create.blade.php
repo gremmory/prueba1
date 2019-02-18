@@ -20,16 +20,13 @@
 
             {!! Form::open(array('url'=> '/model/detalle_equipos/store',  'method'=>'POST', 'autocomplete'=>'off')) !!}
             {{ Form::token() }}
+
+            
+
             <div class="form-group">
                 <label for="cod_establecimiento">Cod Establecimiento</label>
                 <!-- <input type="text" name="cod_establecimiento" class="form-control" value="{{old('cod_establecimiento')}}" placeholder="Cod Establecimiento ..."> -->
-                <select class="form-control" name="cod_establecimiento" required>
-                @if ($establecimientos != null)
-                @foreach($establecimientos as $item)
-                    <option value="{{$item->cod_establecimiento}}">{{$item->cod_establecimiento}} --- {{$item->ESTABLECIMIENTO}}</option>
-                @endforeach
-                @endif
-                </select>
+                {!! Form::text('cod_establecimiento', null, array('placeholder' => 'Buscar Cod. Establecimiento','class' => 'form-control','id'=>'cod_establecimiento', 'required', 'value'=> "{{old('cod_establecimiento')}}" )) !!}
             </div>
             <div class="form-group">
                 <label for="cod_equipo">Cod. Equipo</label>
@@ -98,5 +95,48 @@
 		</div>
 	</div>
 
+
+
+<!-- AutoComplete Jquery -->
+<!--
+    <link href="http://demo.expertphp.in/css/jquery.ui.autocomplete.css" rel="stylesheet">
+    <script src="http://demo.expertphp.in/js/jquery.js"></script>
+    <script src="http://demo.expertphp.in/js/jquery-ui.min.js"></script>
+-->
+    
+
 @endsection
 
+
+@section('script')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        url = "{{ route('detalle_equipos.ajax') }}";
+         $("#cod_establecimiento").typeahead({
+            source:  function (query, process) {
+                return $.get(url, { query: query }, function (data) {
+                    return process(data);
+                });
+
+            }
+            /*
+            source: function(request, response) {
+                $.ajax({
+                    url: src,
+                    dataType: "json",
+                    data: {
+                        term : request.term
+                    },
+                    success: function(data) {
+                        response(data);
+                       
+                    }
+                });
+            },
+            minLength: 3,
+           */
+        });
+    });
+</script>
+@endsection

@@ -111,4 +111,32 @@ class Detalle_EquiposController extends Controller
     	$query->delete();
     	return Redirect::to('model/detalle_equipos');//nomodel/annos
     }
+
+
+    public function autoCompleteEstablecimiento(Request $request) {
+        $query = $request->get('query','');
+        $data= Establecimientos::where('cod_establecimiento','LIKE','%'.$query.'%')->pluck("cod_establecimiento")->toArray();
+        
+        return response()->json($data);
+        /*
+        $data=array();
+
+        foreach ($establecimientos as $establecimiento) {
+                $data[]=array(
+                    'establecimiento'=>$establecimiento->ESTABLECIMIENTO,
+                    'cod_establecimiento'=>$establecimiento->cod_establecimiento
+                );
+        }
+
+        if(count($data))
+             return $data;
+        else
+            return ['value'=>'No se encontro el codigo...','id'=>''];
+
+        */
+    }
+
+/*
+{!! Form::text('search_text', null, array('placeholder' => 'Search Text','class' => 'form-control','id'=>'search_text')) !!}
+*/
 }

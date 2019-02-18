@@ -88,7 +88,12 @@ Route::group(['middleware'=>['auth', 'role']], function(){
 	Route::post('model/fases/store', ['as' =>'FasesFormRequest', 'uses' => 'FasesController@Insetar']);
 
 	Route::resource('model/detalle_equipos', 'Detalle_EquiposController');
-	Route::post('model/detalle_equipos/store', ['as' =>'Detalle_EquiposFormRequest', 'uses' => 'Detalle_EquiposController@Insetar']);
+	Route::post('model/detalle_equipos/store', 
+					['as' =>'Detalle_EquiposFormRequest', 
+					'uses' => 'Detalle_EquiposController@Insetar']
+				);
+	Route::get('model/detalle_equipos-ajax',array('as'=>'detalle_equipos.ajax','uses'=>'Detalle_EquiposController@autoCompleteEstablecimiento'));
+	//Route::get('model/autocompleteEstablecimiento',array('as'=>'searchajax','uses'=>'autocompleteEstablecimiento@autoCompleteEstablecimiento'));
 
 
 	Route::resource('model/instructores', 'InstructoresController');
@@ -106,9 +111,6 @@ Route::group(['middleware'=>['auth', 'role']], function(){
 	Route::get('/carga/dispositivos', 'Carga_EstablecimientoController@index2');
 	Route::post('/carga/dispositivos/store',  'Carga_EstablecimientoController@dispositivoss');
 
-
-
-
 	// para generar PDF
 	//Route::get('generate-pdf','PruebaPDFController@generatePDF');
 
@@ -122,6 +124,8 @@ Route::group(['middleware'=>['auth', 'role']], function(){
 	Route::get('/pdf/generarpdf/ser/{id}', 'GenerarPDFController@getServidor');
 	Route::get('/pdf/generarpdf/rou/{id}', 'GenerarPDFController@getEnrutador');
 	Route::get('/pdf/generarpdf/all/{id}/{dpt}', 'GenerarPDFController@getAll');
+
+	
 });
 
 Route::group(['middleware'=>'auth'], function(){
