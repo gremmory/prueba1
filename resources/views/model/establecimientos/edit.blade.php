@@ -38,7 +38,7 @@
             <div class="form-group">
                 <label for="cod_mupio">Municipio</label>
                 <select class="form-control" name="cod_mupio" id="cod_mupio"  placeholder="Elegir">
-                    <option value="{{ $establecimientos->cod_mupio }}" >{{ $establecimientos->municipios($establecimientos->cod_mupio)  }} </option>
+                    <option value="{{ $establecimientos->cod_mupio }}" >{{ $establecimientos->municipios($establecimientos->cod_mupio, $an->cod_depto)  }} </option>
                 </select>
             </div>
 

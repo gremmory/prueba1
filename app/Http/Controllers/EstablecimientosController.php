@@ -107,10 +107,10 @@ class EstablecimientosController extends Controller
             'cod_nivel' => 'min:2|max:3',
             'DIRECCION' => 'max:300',
             'TELEFONO' => 'numeric|nullable',
-            'SECTOR' => 'max:20',
-            'AREA' => 'max:20',
-            'JORNADA' => 'max:15',
-            'DIRECTOR' => 'max:65',
+            'SECTOR' => 'max:20|nullable',
+            'AREA' => 'max:20|nullable',
+            'JORNADA' => 'max:15|nullable',
+            'DIRECTOR' => 'max:65|nullable',
             'ALUMNOS' => 'numeric|nullable',
             'ALUMNAS' => 'numeric|nullable',
             'TOTAL' => 'numeric|nullable',
@@ -127,7 +127,7 @@ class EstablecimientosController extends Controller
             'seguridad' => 'boolean',
             'status' => 'min:2|max:15',
             'observaciones' => 'max:350',
-            'correo' => 'email|max:50',
+            'correo' => 'email|max:50|nullable',
             'modalidad' => 'max:45',
         ]);
         $query=establecimientos::findOrFail($id);

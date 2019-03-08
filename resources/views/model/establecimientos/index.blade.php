@@ -53,7 +53,7 @@
 					<tr>
 						<td>{{ $an->cod_establecimiento }}</td>
 						<td>{{ $an->departamentos($an->cod_depto) }}</td>
-						<td>{{ $an->municipios($an->cod_mupio) }}</td>
+						<td>{{ $an->municipios($an->cod_mupio, $an->cod_depto) }}</td>
 						<td>{{ $an->ESTABLECIMIENTO }}</td>
 						<td>{{ $an->niveles($an->cod_nivel) }}</td>
 						<td>{{ $an->DIRECCION }}</td>

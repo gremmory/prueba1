@@ -63,9 +63,10 @@ class Establecimientos extends Model
         }
     }
 
-    public function municipios($id){
-        if((\App\Municipios::find($id))){
-            return (\App\Municipios::find($id))->NOM_MUPIO;
+    public function municipios($id, $idDto){
+        if((\App\Municipios::where('COD_MUPIO', '=', $id)->where('COD_DEPTO', '=', $idDto)->first() )){//::find($id))){
+            //return (\App\Municipios::find($id))->NOM_MUPIO;
+            return (\App\Municipios::where('COD_MUPIO', '=', $id)->where('COD_DEPTO', '=', $idDto)->first())->NOM_MUPIO;
         }
     }
 
